@@ -9,3 +9,4 @@ Web.config
 Web.Debug.config
 TwitterBootstrapjQueryValidate.suo
 Web.Release.config
+bin/*

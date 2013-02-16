@@ -19,7 +19,11 @@
         }
         $element.removeClass(errorClass).addClass(validClass);
         // remove the bootstrap error class
-        $element.parents("div.control-group").removeClass("error");
+        if ($element.parents("div.control-group").find("." + errorClass).length == 0)
+        {  
+            // Only remove the class if there are no other errors
+            $element.parents("div.control-group").removeClass("error");
+        }
     }
 });
 

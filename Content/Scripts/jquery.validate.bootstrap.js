@@ -8,7 +8,7 @@
         }
         $element.addClass(errorClass).removeClass(validClass);
         // add the bootstrap error class
-        $element.parents("div.control-group").addClass("error");
+        $element.closest("div.control-group").addClass("error");
     },
     unhighlight: function (element, errorClass, validClass) {
         var $element;
@@ -19,10 +19,10 @@
         }
         $element.removeClass(errorClass).addClass(validClass);
         // remove the bootstrap error class
-        if ($element.parents("div.control-group").find("." + errorClass).length == 0)
+        if ($element.closest("div.control-group").find(".error").length == 0)
         {  
             // Only remove the class if there are no other errors
-            $element.parents("div.control-group").removeClass("error");
+            $element.closest("div.control-group").removeClass("error");
         }
     }
 });

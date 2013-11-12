@@ -1,4 +1,4 @@
-﻿$.validator.setDefaults({
+$.validator.setDefaults({
     highlight: function (element, errorClass, validClass) {
         var $element;
         if (element.type === 'radio') {
@@ -8,7 +8,7 @@
         }
         $element.addClass(errorClass).removeClass(validClass);
         // add the bootstrap error class
-        $element.closest("div.control-group").addClass("error");
+        $element.closest("div.form-group").addClass("has-error");
     },
     unhighlight: function (element, errorClass, validClass) {
         var $element;
@@ -19,10 +19,9 @@
         }
         $element.removeClass(errorClass).addClass(validClass);
         // remove the bootstrap error class
-        if ($element.closest("div.control-group").find(".error").length == 0)
-        {  
+        if ($element.closest("div.form-group").find(".has-error").length == 0) {
             // Only remove the class if there are no other errors
-            $element.closest("div.control-group").removeClass("error");
+            $element.closest("div.form-group").removeClass("has-error");
         }
     }
 });
@@ -44,9 +43,9 @@ $(function () {
 
     // if the page was rendered with an error, add the error class to the control group
     $('form').each(function () {
-        $(this).find('div.control-group').each(function () {
+        $(this).find('div.form-group').each(function () {
             if ($(this).find('.field-validation-error').length > 0) {
-                $(this).addClass('error');
+                $(this).addClass('has-error');
             }
         });
     });

@@ -30,14 +30,8 @@ $(function () {
     // make all validation errors use the bootstrap inline help class on page load if none are specified
     $('.field-validation-valid, .field-validation-error').each(function () {
         var validationMessage = $(this);
-        if (!validationMessage.hasClass("help-inline") || !validationMessage.hasClass("help-block")) {
-            if (validationMessage.is("p")) {                // add block to p tags
-                validationMessage.addClass("help-block");
-            } else if (validationMessage.is("span")) {      // add inline to span tags
-                validationMessage.addClass("help-inline");
-            } else {                                        // add block to another other tag
-                validationMessage.addClass("help-block");
-            }
+        if (!validationMessage.hasClass("help-block")) {
+            validationMessage.addClass("help-block");
         }
     });
 

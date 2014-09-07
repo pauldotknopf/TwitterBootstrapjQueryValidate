@@ -1,6 +1,10 @@
 Twitter Bootstrap - jQuery Validate
 ==============================
 
+##Demo
+
+http://www.pknopf.com/TwitterBootstrapjQueryValidate/
+
 ###What?
 
 This is an integration between two well developed and widely accepted projects.

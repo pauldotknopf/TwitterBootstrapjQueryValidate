@@ -17,11 +17,11 @@ There are some projects out there that offer validation on top of Twitter Bootst
 
 Implementation is very easy.
 
-[Here](https://raw.github.com/theonlylawislove/TwitterBootstrapjQueryValidate/master/Content/Scripts/jquery.validate.bootstrap.js) is the only script file you need.
+[Here](http://www.pknopf.com/TwitterBootstrapjQueryValidate/Scripts/jquery.validate.bootstrap.js) is the only script file you need.
 
 You simple need to include this script directly after the reference to jQuery Validate. For example:
 
-    <script src="/Content/Scripts/jquery-1.7.2.js"                  type="text/javascript"></script>
+    <script src="/Content/Scripts/jquery-2.1.1.js"                  type="text/javascript"></script>
     <script src="/Content/Scripts/jquery.validate.js"               type="text/javascript"></script>
     <script src="/Content/Scripts/jquery.validate.unobtrusive.js"   type="text/javascript"></script>
     <!-- BEGIN: INSERT CUSTOM SCRIPT FILE HERE -->
